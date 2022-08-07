@@ -1,8 +1,8 @@
 ﻿namespace board
 {
-    internal class Position : Board
+    internal class Posicao : Tabuleiro
     {
-       public Position (int linha, int coluna) : base(linha, coluna)
+       public Posicao (int linha, int coluna) : base(linha, coluna)
         {
         }
 

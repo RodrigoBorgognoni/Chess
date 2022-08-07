@@ -43,9 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Board\Position.cs" />
+    <Compile Include="board\Tabuleiro.cs" />
+    <Compile Include="board\Cor.cs" />
+    <Compile Include="board\Peca.cs" />
+    <Compile Include="board\Posicao.cs" />
+    <Compile Include="chess\Rei.cs" />
+    <Compile Include="chess\Torre.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tela.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
