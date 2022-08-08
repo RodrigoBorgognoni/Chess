@@ -48,6 +48,7 @@
     <Compile Include="board\Cor.cs" />
     <Compile Include="board\Peca.cs" />
     <Compile Include="board\Posicao.cs" />
+    <Compile Include="chess\PosicaoXadrez.cs" />
     <Compile Include="chess\Rei.cs" />
     <Compile Include="chess\Torre.cs" />
     <Compile Include="Program.cs" />
