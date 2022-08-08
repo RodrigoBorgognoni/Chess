@@ -1,4 +1,5 @@
-﻿using board;
+﻿using System;
+using board;
 
 namespace chess
 {
@@ -10,7 +11,7 @@ namespace chess
 
         public override string ToString()
         {
-            return "R";
+            return $" R";
         }
     }
 }

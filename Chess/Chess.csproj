@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="board\TabException.cs" />
     <Compile Include="board\Tabuleiro.cs" />
     <Compile Include="board\Cor.cs" />
     <Compile Include="board\Peca.cs" />

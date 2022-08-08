@@ -1,11 +1,11 @@
 ﻿namespace board
 {
-    internal enum Cor : int
+    internal enum Cor
     {
-        Branco = 0,
-        Preto = 1,
-        Vermelho = 2,
-        Amarelo = 3,
-        Marrom = 4
+        Branco,
+        Preto,
+        Vermelho,
+        Amarelo,
+        Marrom
     }
 }

@@ -8,15 +8,23 @@ namespace Chess
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            try
+            {
+                Tabuleiro tab = new Tabuleiro(8, 8);
 
-            tab.ColocarPeca(new Torre(Cor.Amarelo, tab), new Posicao(0, 0));
-            tab.ColocarPeca(new Torre(Cor.Amarelo, tab), new Posicao(1, 3));
-            tab.ColocarPeca(new Rei(Cor.Amarelo, tab), new Posicao(2, 4));
+                tab.ColocarPeca(new Torre(Cor.Preto, tab), new Posicao(0, 0));
+                tab.ColocarPeca(new Torre(Cor.Preto, tab), new Posicao(1, 3));
+                tab.ColocarPeca(new Rei(Cor.Preto, tab), new Posicao(2, 4));
 
-            Tela.ImprimirTab(tab);
 
-            Console.ReadLine();
+                Tela.ImprimirTab(tab);
+
+                Console.ReadLine();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

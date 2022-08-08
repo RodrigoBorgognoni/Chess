@@ -7,9 +7,6 @@ namespace Chess
     {
         public static void ImprimirTab(Tabuleiro board)
         {
-
-            //board.ColorBack();
-
             for (int i = 0; i < board.Linha; i++)
             {
                 for (int j = 0; j < board.Coluna; j++)
