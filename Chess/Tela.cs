@@ -5,24 +5,43 @@ namespace Chess
 {
     internal class Tela
     {
-        public static void ImprimirTab(Tabuleiro board)
+        public static void ImprimirTab(Tabuleiro tab)
         {
-            for (int i = 0; i < board.Linha; i++)
+            Console.BackgroundColor = ConsoleColor.Blue;
+            for (int i = 0; i < tab.Linha; i++)
             {
-                for (int j = 0; j < board.Coluna; j++)
+                Console.Write("    " + (8 - i) + "  ");
+                for (int j = 0; j < tab.Coluna; j++)
                 {
-                    if (board.Peca(i, j) == null)
+                    if (tab.Peca(i, j) == null)
                     {
                         Console.Write(" - ");
                     }
                     else
-                    Console.Write($"{board.Peca(i,j)} ");
+                        ImprimirPeca(tab.Peca(i, j));
                 }
                 Console.WriteLine();
             }
-            
+            Console.WriteLine("                               ");
+            Console.WriteLine("        a  b  c  d  e  f  g  h ");
         }
 
-        
+        public static void ImprimirPeca(Peca peca)
+        {
+            if (peca.Cor == Cor.Branco)
+            {
+                ConsoleColor aux = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(peca + " ");
+                Console.ForegroundColor = aux;
+            }
+            else
+            {
+                ConsoleColor aux = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write(peca + " ");
+                Console.ForegroundColor = aux;
+            }
+        }    
     }
 }
