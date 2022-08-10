@@ -20,5 +20,10 @@ namespace board
             QtdMovimentos = 0;
             Tab = tab;
         }
+
+        public void IncremetarQtdMovimentos()
+        {
+            QtdMovimentos++;
+        }
     }
 }

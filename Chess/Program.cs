@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using board;
 using chess;
 
@@ -10,15 +10,19 @@ namespace Chess
         {
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaXadrez partida = new PartidaXadrez();
+                while (!partida.terminada)
+                {
+                    Console.Clear();
+                    Tela.ImprimirTab(partida.tab);
 
-                tab.ColocarPeca(new Torre(Cor.Preto, tab), new Posicao(0, 0));
-                tab.ColocarPeca(new Torre(Cor.Preto, tab), new Posicao(1, 3));
-                tab.ColocarPeca(new Rei(Cor.Preto, tab), new Posicao(2, 4));
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
-                tab.ColocarPeca(new Torre(Cor.Branco, tab), new Posicao(3, 5));
-
-                Tela.ImprimirTab(tab);
+                    partida.ExecutaMovimento(origem, destino);
+                }
 
                 Console.ReadLine();
             }

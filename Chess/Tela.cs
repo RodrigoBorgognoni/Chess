@@ -1,5 +1,6 @@
 ﻿using System;
 using board;
+using chess;
 
 namespace Chess
 {
@@ -7,7 +8,7 @@ namespace Chess
     {
         public static void ImprimirTab(Tabuleiro tab)
         {
-            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             for (int i = 0; i < tab.Linha; i++)
             {
                 Console.Write("    " + (8 - i) + "  ");
@@ -24,6 +25,7 @@ namespace Chess
             }
             Console.WriteLine("                               ");
             Console.WriteLine("        a  b  c  d  e  f  g  h ");
+            Console.WriteLine("                               ");
         }
 
         public static void ImprimirPeca(Peca peca)
@@ -42,6 +44,15 @@ namespace Chess
                 Console.Write(peca + " ");
                 Console.ForegroundColor = aux;
             }
-        }    
+        }
+
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1].ToString());
+
+            return new PosicaoXadrez(coluna, linha);
+        }
     }
 }
