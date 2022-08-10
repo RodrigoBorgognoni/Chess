@@ -3,12 +3,12 @@ using board;
 
 namespace board
 {
-    internal class Peca
+    abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; set; }
         public int QtdMovimentos { get; protected set; }
-        public Tabuleiro Tab { get; protected set; }      
+        public Tabuleiro Tab { get; protected set; }
 
         public Peca()
         { }
@@ -25,5 +25,7 @@ namespace board
         {
             QtdMovimentos++;
         }
+
+        public abstract bool[,] MovimentosPossiveis();
     }
 }

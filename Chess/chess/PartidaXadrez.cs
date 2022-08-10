@@ -31,6 +31,7 @@ namespace chess
         private void ColocarPeca()
         {
             tab.ColocarPeca(new Torre(Cor.Branco, tab), new PosicaoXadrez('a', 1).ToPosicao());
+            tab.ColocarPeca(new Torre(Cor.Branco, tab), new PosicaoXadrez('c', 2).ToPosicao());
             tab.ColocarPeca(new Torre(Cor.Branco, tab), new PosicaoXadrez('h', 1).ToPosicao());
             tab.ColocarPeca(new Rei(Cor.Branco, tab), new PosicaoXadrez('d', 1).ToPosicao());
 
